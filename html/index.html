@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
     </header>
 
     <nav>
-        <a href="exercise/test.html">00 - Test</a> | 
+        <a href="exercise/test.html">00 - Test</a> |
         <a href="exercise/tag-for-text.html">01 - tag for text</a> |
         <a href="exercise/tag-for-text2.html">02 - tag for text 2</a> |
         <a href="exercise/list.html">03 - list</a> |
@@ -27,8 +28,9 @@
         <a href="exercise/links.html">05 - links</a> |
         <a href="exercise/table.html">06 - table</a> |
         <a href="exercise/form/form.html">07 - form</a> |
-
-        <a href="http://localhost:8080">Return to Home</a>
+        <a href="exercise/images.html">08 - image</a> |
+        <a href="exercise/video.html">09 - video</a> |
+        
     </nav>
 
     <section id="content">
@@ -36,21 +38,22 @@
     </section>
 
     <footer>
-       <p>Course Modern Web</p> 
+        <p>Course Modern Web</p>
     </footer>
 
     <script>
         document.querySelectorAll('a').forEach(link => {
-            link.onclick = function(e) {
+            link.onclick = function (e) {
                 e.preventDefault()
 
                 const content = document.getElementById('content')
                 fetch(link.href)
-                .then(resp => resp.text())
-                .then(html => content.innerHTML = html)
+                    .then(resp => resp.text())
+                    .then(html => content.innerHTML = html)
             }
         })
     </script>
 
 </body>
+
 </html>
